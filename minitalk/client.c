@@ -6,20 +6,21 @@
 /*   By: ecarlier <ecarlier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 15:23:15 by ecarlier          #+#    #+#             */
-/*   Updated: 2024/01/25 16:47:55 by ecarlier         ###   ########.fr       */
+/*   Updated: 2024/01/26 16:31:56 by ecarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/libft.h"
+#include <signal.h>
 
 void	print_error(void);
 void	send_signal(int pid, char c);
 
-/* ./client <server_pid> <message> */
+
 int	main(int argc, char *argv[])
 {
-	int	server_id;
-	int	i;
+	int			server_id;
+	int			i;
 	char		*msg;
 
 	i = 0;
@@ -55,6 +56,7 @@ void	send_signal(int pid, char c)
 	int	n;
 	int	i;
 
+	n = c;
 	i = 7;
 	while (i >= 0)
 	{
